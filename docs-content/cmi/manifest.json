@@ -1,9 +1,8 @@
 {
   "projectCode": "cmi",
   "projectName": "CMI User Guide",
-  "description": "Tài liệu cài đặt và vận hành dành riêng cho dự án CMI.",
-  "icon": "Boxes",
-  "status": "active",
+  "description": "Tài liệu cài đặt, vận hành, deploy và hướng dẫn API dành riêng cho dự án CMI.",
+  "icon": "BookOpen",
   "folders": [
     {
       "folderCode": "install",
@@ -33,15 +32,8 @@
           "type": "markdown"
         },
         {
-          "slug": "jits-keyvault",
-          "title": "Bước 4: Cài đặt JITS KeyVault",
-          "description": "Clone source JITS KeyVault, cấu hình .env và chạy bằng Docker Compose",
-          "file": "install/jits-keyvault.md",
-          "type": "markdown"
-        },
-        {
           "slug": "o24service-api",
-          "title": "Bước 5: Cài đặt O24Service API",
+          "title": "Bước 4: Cài đặt O24Service API",
           "description": "Tạo thư mục /app, cấu hình docker-compose.yml và chạy các O24Service API",
           "file": "install/o24service-api.md",
           "type": "markdown"
@@ -56,20 +48,35 @@
       ]
     },
     {
-      "folderCode": "guide",
-      "title": "Cấu hình triển khai CMI Portal",
-      "description": "Ghi chú triển khai cấu hình CMI Portal",
-      "icon": "Rocket",
+      "folderCode": "api-guide",
+      "title": "Tài liệu hướng dẫn sử dụng API",
+      "description": "Hướng dẫn cách gọi API, workflow, request/response, xác thực và các lỗi thường gặp",
+      "icon": "Code",
       "documents": [
         {
-          "slug": "guide-setup-portal",
-          "title": "Hướng dẫn sử dụng O24 Portal",
-          "summary": "Hướng dẫn cấu hình và sử dụng O24 Portal.",
-          "file": "guide/setup-portal.md",
-          "type": "markdown",
-          "updatedAt": "2026-07-06"
+          "slug": "api-overview",
+          "title": "Tổng quan API",
+          "description": "Giới thiệu tổng quan cách sử dụng API trong CMI Portal",
+          "file": "api-guide/overview.md",
+          "type": "markdown"
+        },
+        {
+          "slug": "api-pdf",
+          "title": "Tài liệu API CMI Portal PDF",
+          "description": "Mở file PDF hướng dẫn sử dụng API CMI Portal",
+          "file": "api-guide/api-pdf.md",
+          "type": "markdown"
         }
       ]
+    },
+    {
+      "folderCode": "playground",
+      "title": "Playground",
+      "description": "Thử nghiệm và gọi API trực tiếp bằng Postwoman",
+      "icon": "Terminal",
+      "type": "playground",
+      "url": "https://postwoman.jits.com.vn:5555/",
+      "documents": []
     }
   ]
 }
