@@ -56,16 +56,16 @@
       ]
     },
     {
-      "folderCode": "deployment",
+      "folderCode": "guide",
       "title": "Cấu hình triển khai CMI Portal",
       "description": "Ghi chú triển khai cấu hình CMI Portal",
       "icon": "Rocket",
       "documents": [
         {
-          "slug": "docker-push",
-          "title": "Build và push Docker image",
-          "summary": "Lệnh build image, tag image và push lên Docker Hub.",
-          "file": "deployment/docker-push.md",
+          "slug": "guide-setup-portal",
+          "title": "Hướng dẫn sử dụng O24 Portal",
+          "summary": "Hướng dẫn cấu hình và sử dụng O24 Portal.",
+          "file": "guide/setup-portal.md",
           "type": "markdown",
           "updatedAt": "2026-07-06"
         }
