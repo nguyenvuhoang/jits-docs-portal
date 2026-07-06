@@ -39,6 +39,13 @@
           "type": "markdown"
         },
         {
+          "slug": "jits-keyvault",
+          "title": "Bước 5: Cài đặt JITS Key-vault",
+          "description": "Hướng dẫn clone, cấu hình và chạy JITS Key-vault phục vụ quản lý secret/config cho hệ thống O24",
+          "file": "install/jits-keyvault.md",
+          "type": "markdown"
+        },
+        {
           "slug": "o24portal",
           "title": "Bước 6: Cài đặt O24Portal",
           "description": "Thêm service O24Portal vào Docker Compose, chạy container frontend và kiểm tra truy cập web",
@@ -65,6 +72,13 @@
           "title": "Tài liệu API CMI Portal PDF",
           "description": "Mở file PDF hướng dẫn sử dụng API CMI Portal",
           "file": "api-guide/api-pdf.md",
+          "type": "markdown"
+        },
+        {
+          "slug": "postwoman-import",
+          "title": "Hướng dẫn sử dụng API bằng Postwoman",
+          "description": "Hướng dẫn add instance, login, chọn workspace CMI và gọi API trong Postwoman",
+          "file": "api-guide/postwoman-import.md",
           "type": "markdown"
         }
       ]

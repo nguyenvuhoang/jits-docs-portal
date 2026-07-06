@@ -73,6 +73,13 @@ export default async function PlaygroundPage({
                         </a>
 
                         <a
+                            href={`/user-guide/${normalized}/api-guide/postwoman-import`}
+                            className="button-secondary"
+                        >
+                            Hướng dẫn import API
+                        </a>
+
+                        <a
                             href={PLAYGROUND_URL}
                             target="_blank"
                             rel="noreferrer"
