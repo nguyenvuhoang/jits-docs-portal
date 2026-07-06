@@ -1,0 +1,75 @@
+{
+  "projectCode": "cmi",
+  "projectName": "CMI User Guide",
+  "description": "Tài liệu cài đặt và vận hành dành riêng cho dự án CMI.",
+  "icon": "Boxes",
+  "status": "active",
+  "folders": [
+    {
+      "folderCode": "install",
+      "title": "Cài đặt môi trường",
+      "description": "Các hướng dẫn cài đặt server, Docker, database và môi trường vận hành",
+      "icon": "Server",
+      "documents": [
+        {
+          "slug": "docker-ubuntu-26",
+          "title": "Bước 1: Cài đặt Docker trên Ubuntu 26.04",
+          "description": "Hướng dẫn cài Docker Engine, Docker Compose plugin và cấu hình log rotation",
+          "file": "install/docker-ubuntu-26.md",
+          "type": "markdown"
+        },
+        {
+          "slug": "portainer",
+          "title": "Bước 2: Cài đặt Portainer",
+          "description": "Hướng dẫn cài Portainer CE để quản lý Docker bằng giao diện web",
+          "file": "install/portainer.md",
+          "type": "markdown"
+        },
+        {
+          "slug": "sqlserver-container",
+          "title": "Bước 3: Cài đặt SQL Server container",
+          "description": "Hướng dẫn chạy SQL Server Express bằng Docker Compose, cấu hình port 1433, volume, backup và restore",
+          "file": "install/sqlserver-container.md",
+          "type": "markdown"
+        },
+        {
+          "slug": "jits-keyvault",
+          "title": "Bước 4: Cài đặt JITS KeyVault",
+          "description": "Clone source JITS KeyVault, cấu hình .env và chạy bằng Docker Compose",
+          "file": "install/jits-keyvault.md",
+          "type": "markdown"
+        },
+        {
+          "slug": "o24service-api",
+          "title": "Bước 5: Cài đặt O24Service API",
+          "description": "Tạo thư mục /app, cấu hình docker-compose.yml và chạy các O24Service API",
+          "file": "install/o24service-api.md",
+          "type": "markdown"
+        },
+        {
+          "slug": "o24portal",
+          "title": "Bước 6: Cài đặt O24Portal",
+          "description": "Thêm service O24Portal vào Docker Compose, chạy container frontend và kiểm tra truy cập web",
+          "file": "install/o24portal.md",
+          "type": "markdown"
+        }
+      ]
+    },
+    {
+      "folderCode": "deployment",
+      "title": "Cấu hình triển khai CMI Portal",
+      "description": "Ghi chú triển khai cấu hình CMI Portal",
+      "icon": "Rocket",
+      "documents": [
+        {
+          "slug": "docker-push",
+          "title": "Build và push Docker image",
+          "summary": "Lệnh build image, tag image và push lên Docker Hub.",
+          "file": "deployment/docker-push.md",
+          "type": "markdown",
+          "updatedAt": "2026-07-06"
+        }
+      ]
+    }
+  ]
+}

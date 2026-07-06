@@ -1,0 +1,65 @@
+{
+  "projectCode": "emi",
+  "projectName": "EMI User Guide",
+  "description": "Tài liệu cài đặt, vận hành, deploy và xử lý lỗi cho hệ thống EMI.",
+  "icon": "BookOpen",
+  "status": "active",
+  "folders": [
+    {
+      "folderCode": "install",
+      "title": "Cài đặt môi trường",
+      "description": "Hướng dẫn chuẩn bị Docker, SQL Server, Redis, RabbitMQ và các thành phần nền tảng.",
+      "icon": "Server",
+      "documents": [
+        {
+          "slug": "docker",
+          "title": "Cài đặt Docker",
+          "summary": "Các bước cài Docker, kiểm tra service và lệnh vận hành cơ bản.",
+          "file": "install/docker.md",
+          "type": "markdown",
+          "updatedAt": "2026-07-06"
+        },
+        {
+          "slug": "nginx",
+          "title": "Cấu hình Nginx Reverse Proxy",
+          "summary": "Mẫu reverse proxy cho API, CMS và xử lý CORS cơ bản.",
+          "file": "install/nginx.html",
+          "type": "html",
+          "updatedAt": "2026-07-06"
+        }
+      ]
+    },
+    {
+      "folderCode": "deployment",
+      "title": "Deploy hệ thống",
+      "description": "Build source, push Docker image, restart container và kiểm tra healthcheck.",
+      "icon": "Rocket",
+      "documents": [
+        {
+          "slug": "publish-cms",
+          "title": "Publish CMS bằng Docker",
+          "summary": "Quy trình build image, push registry và cập nhật container CMS.",
+          "file": "deployment/publish-cms.md",
+          "type": "markdown",
+          "updatedAt": "2026-07-06"
+        }
+      ]
+    },
+    {
+      "folderCode": "troubleshooting",
+      "title": "Lỗi thường gặp",
+      "description": "Tổng hợp lỗi vận hành và cách kiểm tra nhanh.",
+      "icon": "Wrench",
+      "documents": [
+        {
+          "slug": "500-error",
+          "title": "Xử lý lỗi 500 khi form chưa phát triển",
+          "summary": "Cách nhận diện lỗi 500 từ form service và hướng xử lý UI.",
+          "file": "troubleshooting/500-error.html",
+          "type": "html",
+          "updatedAt": "2026-07-06"
+        }
+      ]
+    }
+  ]
+}

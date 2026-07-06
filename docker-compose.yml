@@ -1,0 +1,12 @@
+services:
+  user-guide-portal:
+    build: .
+    container_name: user-guide-portal
+    restart: unless-stopped
+    ports:
+      - "3009:3000"
+    environment:
+      GUIDE_AUTH_SECRET: "change-this-to-a-long-random-secret"
+      GUIDE_KEY_EMI: "emi@2026"
+      GUIDE_KEY_CMI: "cmi@2026"
+      GUIDE_UNLOCK_HOURS: "8"

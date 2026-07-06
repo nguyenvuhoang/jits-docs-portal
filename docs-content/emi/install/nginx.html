@@ -1,0 +1,22 @@
+<h1>Cấu hình Nginx Reverse Proxy</h1>
+<p>Mẫu cấu hình này dùng để proxy request từ domain public vào service nội bộ.</p>
+
+<h2>Ví dụ cấu hình</h2>
+<pre><code>server {
+    listen 80;
+    server_name cms.example.com;
+
+    location / {
+        proxy_pass http://127.0.0.1:5000;
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+        proxy_set_header X-Forwarded-Proto $scheme;
+    }
+}</code></pre>
+
+<h2>Kiểm tra cấu hình</h2>
+<pre><code>sudo nginx -t
+sudo systemctl reload nginx</code></pre>
+
+<p>Nếu API có CORS, cần kiểm tra lại origin, header và phương thức OPTIONS.</p>

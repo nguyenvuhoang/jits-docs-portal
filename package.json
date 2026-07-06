@@ -1,0 +1,30 @@
+{
+  "name": "o24-user-guide-portal",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Standalone Next.js documentation portal for project user guides.",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@types/node": "latest",
+    "@types/react": "latest",
+    "@types/react-dom": "latest",
+    "@types/react-syntax-highlighter": "^15.5.13",
+    "@types/sanitize-html": "latest",
+    "lucide-react": "latest",
+    "next": "latest",
+    "react": "latest",
+    "react-dom": "latest",
+    "react-markdown": "latest",
+    "react-syntax-highlighter": "^16.1.1",
+    "rehype-raw": "latest",
+    "rehype-sanitize": "latest",
+    "remark-gfm": "latest",
+    "sanitize-html": "latest",
+    "typescript": "latest"
+  }
+}

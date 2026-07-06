@@ -1,0 +1,21 @@
+<h1>Xử lý lỗi 500 khi form chưa phát triển</h1>
+<p>Khi backend trả lỗi hệ thống vì form chưa có cấu hình, UI nên hiển thị màn hình chưa phát triển thay vì crash.</p>
+
+<h2>Response thường gặp</h2>
+<pre><code>{
+  "key": "500",
+  "code": "SYS_03_001",
+  "type": "system",
+  "info": "SYS_03_001",
+  "type_error": "danger",
+  "execute_id": "",
+  "next_action": ""
+}</code></pre>
+
+<h2>Hướng xử lý</h2>
+<ul>
+  <li>Kiểm tra mã lỗi <code>SYS_03_001</code>.</li>
+  <li>Hiển thị trang thông báo chức năng đang được phát triển.</li>
+  <li>Không redirect vòng lặp.</li>
+  <li>Ghi log route hiện tại để đội phát triển bổ sung form.</li>
+</ul>
