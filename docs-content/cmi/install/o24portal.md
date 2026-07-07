@@ -64,8 +64,8 @@ NEXT_PUBLIC_CMS_API_URL=http://<SERVER_IP>:5000
 Ví dụ với IP server:
 
 ```env
-NEXT_PUBLIC_API_BASE_URL=http://192.168.1.121:5000
-NEXT_PUBLIC_CMS_API_URL=http://192.168.1.121:5000
+NEXT_PUBLIC_API_BASE_URL=http://52.74.180.169:5000
+NEXT_PUBLIC_CMS_API_URL=http://52.74.180.169:5000
 ```
 
 > Lưu ý: tùy source O24Portal đang đọc biến môi trường nào, tên biến có thể khác. Cần kiểm tra file cấu hình frontend nếu portal không gọi API đúng.
@@ -81,64 +81,30 @@ nano /app/docker-compose.yml
 Thêm service sau vào trong block `services:`.
 
 ```yaml
-  o24-portal:
-    image: justintimesolutions/cmiportal:${IMAGE_TAG}
-    container_name: o24-portal
-    restart: always
+  services:
+    cmiportal:
+      image: justintimesolutions/cmiportal:latest
+      container_name: cmiportal
+      restart: always
 
-    ports:
-      - "${PORTAL_PORT}:3000"
+      ports:
+        - "127.0.0.1:3000:3000"
 
-    env_file:
-      - .env
+      env_file:
+        - .env
 
-    environment:
-      NODE_ENV: production
+      environment:
+        NODE_ENV: production
+        PORT: 3000
+        HOSTNAME: 0.0.0.0
 
-    depends_on:
-      - o24-cms
-      - o24-cth
-      - o24-cbg
+      networks:
+        - cmiportal-network
 
-    networks:
-      - o24openapi-network
-```
+  networks:
+    cmiportal-network:
+      name: cmiportal-network
 
-Ví dụ vị trí thêm:
-
-```yaml
-services:
-  o24-wfo:
-    image: justintimesolutions/cmi_o24wfo:${IMAGE_TAG}
-    container_name: o24-wfo
-    restart: always
-    ...
-
-  o24-portal:
-    image: justintimesolutions/cmiportal:${IMAGE_TAG}
-    container_name: o24-portal
-    restart: always
-
-    ports:
-      - "${PORTAL_PORT}:3000"
-
-    env_file:
-      - .env
-
-    environment:
-      NODE_ENV: production
-
-    depends_on:
-      - o24-cms
-      - o24-cth
-      - o24-cbg
-
-    networks:
-      - o24openapi-network
-
-  o24-redis:
-    image: redis:7-alpine
-    ...
 ```
 
 > Service `o24-portal` nên nằm chung compose với O24Service API để dùng chung network `o24openapi-network`.
@@ -248,7 +214,7 @@ http://<SERVER_IP>:3000
 Ví dụ:
 
 ```txt
-http://192.168.1.121:3000
+http://52.74.180.169:3000
 ```
 
 Nếu chạy trên cloud server:
